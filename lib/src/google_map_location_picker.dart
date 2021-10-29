@@ -34,6 +34,7 @@ class LocationPicker extends StatefulWidget {
     this.searchBarBoxDecoration,
     this.hintText,
     this.resultCardConfirmIcon,
+    this.marker,
     this.resultCardAlignment,
     this.resultCardDecoration,
     this.resultCardPadding,
@@ -59,6 +60,7 @@ class LocationPicker extends StatefulWidget {
   final BoxDecoration searchBarBoxDecoration;
   final String hintText;
   final Widget resultCardConfirmIcon;
+  final Widget marker;
   final Alignment resultCardAlignment;
   final Decoration resultCardDecoration;
   final EdgeInsets resultCardPadding;
@@ -419,6 +421,7 @@ class LocationPickerState extends State<LocationPicker> {
             searchBarBoxDecoration: widget.searchBarBoxDecoration,
             hintText: widget.hintText,
             resultCardConfirmIcon: widget.resultCardConfirmIcon,
+            marker: widget.marker,
             resultCardAlignment: widget.resultCardAlignment,
             resultCardDecoration: widget.resultCardDecoration,
             resultCardPadding: widget.resultCardPadding,
@@ -457,6 +460,7 @@ Future<LocationResult> showLocationPicker(
   BoxDecoration searchBarBoxDecoration,
   String hintText,
   Widget resultCardConfirmIcon,
+  Icon marker,
   AlignmentGeometry resultCardAlignment,
   EdgeInsetsGeometry resultCardPadding,
   Decoration resultCardDecoration,
@@ -479,6 +483,7 @@ Future<LocationResult> showLocationPicker(
           mapStylePath: mapStylePath,
           appBarColor: appBarColor,
           hintText: hintText,
+          marker: marker,
           searchBarBoxDecoration: searchBarBoxDecoration,
           resultCardConfirmIcon: resultCardConfirmIcon,
           resultCardAlignment: resultCardAlignment,

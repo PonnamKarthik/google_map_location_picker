@@ -33,6 +33,7 @@ class MapPicker extends StatefulWidget {
     this.searchBarBoxDecoration,
     this.hintText,
     this.resultCardConfirmIcon,
+    this.marker,
     this.resultCardAlignment,
     this.resultCardDecoration,
     this.resultCardPadding,
@@ -56,6 +57,7 @@ class MapPicker extends StatefulWidget {
   final BoxDecoration searchBarBoxDecoration;
   final String hintText;
   final Widget resultCardConfirmIcon;
+  final Widget marker;
   final Alignment resultCardAlignment;
   final Decoration resultCardDecoration;
   final EdgeInsets resultCardPadding;
@@ -353,7 +355,7 @@ class MapPickerState extends State<MapPicker> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(Icons.place, size: 56),
+            widget.marker ?? Icon(Icons.place, size: 56),
             Container(
               decoration: ShapeDecoration(
                 shadows: [
